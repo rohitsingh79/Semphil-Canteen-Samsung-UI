@@ -3,24 +3,18 @@ import styled from 'styled-components';
 const MainWrapper = styled.div`
 display:flex;
 width:100%;
-height:100%;
+height:819px;
 justify-content:center;
 align-items:center;
-
-.seperator{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    box-sizing:border-box;
-}
+background:yellow;
+border:1px solid black;
 `;
 
-const Wrapper = styled.div`
+const GridWrapper = styled.div`
 display:grid;
-grid-template-columns:30% 30% 30% 30%;
-grid-template-rows:120%;
+grid-template-columns:325px 325px 325px 325px;
+grid-template-rows:600px;
 gap:40px;
-margin-top:220px;
 `;
 
-export {MainWrapper , Wrapper};
+export {MainWrapper , GridWrapper};
