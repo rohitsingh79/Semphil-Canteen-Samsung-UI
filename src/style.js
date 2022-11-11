@@ -8,6 +8,7 @@ justify-content:center;
 align-items:center;
 background:yellow;
 border:1px solid black;
+box-sizing:border-box;
 `;
 
 const GridWrapper = styled.div`
