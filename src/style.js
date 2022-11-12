@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 
-const MainWrapper = styled.div`
-display:flex;
+export const MainWrapper = styled.div`
+height:${props => props.height}%;
 width:100%;
-height:819px;
-justify-content:center;
-align-items:center;
-background:yellow;
-border:1px solid black;
+height:${props => props.height}px;
+padding:10% 3%;
 box-sizing:border-box;
 `;
 
-const GridWrapper = styled.div`
+
+export const GridWrapper = styled.div`
 display:grid;
-grid-template-columns:325px 325px 325px 325px;
-grid-template-rows:600px;
+grid-template-columns:310px 310px 310px 310px;
+@media only screen and (max-width:1000px){
+    grid-template-columns:150px 150px 150px 150px;
+}
+grid-template-rows:500px;
 gap:40px;
 `;
-
-export {MainWrapper , GridWrapper};

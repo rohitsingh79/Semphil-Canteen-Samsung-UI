@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
 height:100%;
 width:100%;
-background:orange;
+background:linear-gradient(red ,orange);
 padding:8px;
 box-sizing:border-box;
 
@@ -36,8 +36,9 @@ justify-content:space-around;
 `;
 
 const MenuListWrapper = styled.div`
-height:80%;
+height:100%;
 width:100%;
+background:linear-gradient(pink , red , orange);
 `
 
 export {Wrapper ,MenuListWrapper};

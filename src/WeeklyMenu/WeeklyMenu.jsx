@@ -1,6 +1,6 @@
-import {MenuList , GridItems , 
-    TextMenu , MenuCard ,MenuWrapper,} from './style' ;
+import {MenuList , GridItems , TextMenu , MenuCard ,MenuWrapper,} from './style' ;
 import Suggestion from './Suggestion';
+import HOC from '../HOC/HOC';
 
 function WeeklyMenu(){
 
@@ -11,7 +11,7 @@ function WeeklyMenu(){
   ] 
 
   return (
-    <MenuWrapper>
+    <>
     <MenuList>
       <div className='menuText'>Weekly Menu List</div>
     <GridItems> 
@@ -22,11 +22,10 @@ function WeeklyMenu(){
      })}
     </GridItems>
      </MenuList>
-     <Suggestion></Suggestion>
- </MenuWrapper>
+ </>
   )
 
 
 }
 
-export default WeeklyMenu;
+export default WeeklyMenu = HOC(75 , WeeklyMenu , Suggestion);

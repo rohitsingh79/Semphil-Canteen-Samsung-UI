@@ -1,7 +1,8 @@
 import {Wrapper} from './style';
 import breakfast from './breakfast.png';
 import Image from '../Image/Image';
-import MenuList from './MenuList'
+import HOC from '../HOC/HOC';
+
 
 function MenuOfDay(){
 
@@ -29,7 +30,6 @@ function MenuOfDay(){
                 <div>Menu of the day</div>
                 <div className='dateWrapper'>2019-05-2021</div>
             </div>
-            <MenuList/>
             <div className='imageWrapper'>
             {menuType.map((type , id)=>{
                 return (
@@ -48,4 +48,4 @@ function MenuOfDay(){
 
 }
 
-export default MenuOfDay
+export default MenuOfDay = HOC(100 , MenuOfDay , false) ;

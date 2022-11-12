@@ -62,9 +62,8 @@ align-items:flex-end;
 
 const SuggestionWrapper = styled.div`
 width:100%;
-height:120px;
+height:100%;
 background:black;
-margin-top:16px;
 display:flex;
 justify-content:center;
 align-items:center;
