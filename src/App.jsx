@@ -1,7 +1,8 @@
 import './App.css';
 import { MainWrapper , GridWrapper } from './style';
 import WeeklyMenu from './WeeklyMenu/WeeklyMenu';
-import MenuOfDay from './MenuOfDay/MenuOfDay';
+import MenuList from './MenuOfDay/MenuList';
+
 
 function App() {
   const height = window.innerHeight;
@@ -9,7 +10,7 @@ function App() {
    <MainWrapper height = {height}>
       <GridWrapper>
       <WeeklyMenu/>
-      <MenuOfDay></MenuOfDay>
+      <MenuList/>
      </GridWrapper>
    </MainWrapper>
   );
