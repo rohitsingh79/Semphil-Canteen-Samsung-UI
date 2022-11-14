@@ -1,28 +1,85 @@
 import {MenuList , GridItems , TextMenu , MenuCard ,MenuWrapper,} from './style' ;
 import Suggestion from './Suggestion';
 import HOC from '../HOC/HOC';
+import styled from 'styled-components';
+
+const WeeklyMenuWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  box-sizing: border-box;
+  opacity: 0.85;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position:relative;
+`;
+
+const GridWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  box-sizing: border-box;
+`;
+
+const GridChild = styled.div`
+  flex: 30%;
+  height: 50%;
+  border-radius: 5%;
+  margin: 5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+`;
+
+const MenuText = styled.div`
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 15px;
+  font-weight: bold;
+  font-family: sans-serif;
+`;
+
+const ListText = styled.div`
+color:white;
+font-size:12px;
+font-weight: bold;
+`
 
 function WeeklyMenu(){
 
-    const Menus = [{menuType:'Local Menu' , color:'blue'},
-    {menuType:'Korean Menu' , color:'orange'},
-    {menuType:'Special Menu' , color:'purple'},
-    {menuType:'Healthy Menu',color:'yellow'}
-  ] 
-
   return (
-    <>
-    <MenuList>
-      <div className='menuText'>Weekly Menu List</div>
-    <GridItems> 
-     {Menus.map((menu , index)=>{
+    <WeeklyMenuWrapper>
+    <MenuText>Weekly Menu list</MenuText>
+    <GridWrapper>
+      <GridChild
+        style={{ background: "linear-gradient(to top right, orange, red)" }}
+      >
+       <ListText>Local Menu</ListText>
+      </GridChild>  
 
-       return ( <MenuCard key = {index} color = {menu.color}><TextMenu>{menu.menuType}</TextMenu></MenuCard>)
-
-     })}
-    </GridItems>
-     </MenuList>
- </>
+      <GridChild
+        style={{ background: "linear-gradient(to top right, blue, purple)" }}
+      >
+         <ListText>Korean Menu</ListText>
+      </GridChild>
+      <GridChild
+        style={{
+          background: "linear-gradient(to top right, #5D3FD3, #BF40BF)"
+        }}
+      > <ListText>Special Menu</ListText></GridChild>
+      <GridChild
+        style={{
+          background: "linear-gradient(to top right, #AA336A, orange)"
+        }}
+      >
+         <ListText>Healthy Menu</ListText>
+      </GridChild>
+    </GridWrapper>
+  </WeeklyMenuWrapper>
   )
 
 
