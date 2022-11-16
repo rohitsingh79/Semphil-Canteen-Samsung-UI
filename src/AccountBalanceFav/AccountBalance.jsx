@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import HOC from '../HOC/HOC';
+import Favorite from "./Favorite";
 
 const AccountBalanceWrapper = styled.div`
   width: 100%;
@@ -98,4 +99,4 @@ function AccountBalanceList(){
 
 }
 
-export default AccountBalanceList = HOC(75 ,AccountBalanceList , false );
+export default AccountBalanceList = HOC(72 ,AccountBalanceList , Favorite );

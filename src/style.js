@@ -15,6 +15,6 @@ grid-template-columns:310px 310px 310px 310px;
 @media only screen and (max-width:1000px){
     grid-template-columns:150px 150px 150px 150px;
 }
-grid-template-rows:550px;
+grid-template-rows:600px;
 gap:40px;
 `;
