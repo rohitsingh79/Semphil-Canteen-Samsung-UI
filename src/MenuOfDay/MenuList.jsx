@@ -7,7 +7,7 @@ import breakfast from './breakfast.png';
  const MenuWrapper = styled.div`
   height:100%;
   width:100%;
-  background: linear-gradient(#E52B50, #FF5F1F);
+  background: linear-gradient(#E52B50, #F28C28);
   box-sizing: border-box;
   padding: 32px;
   position: relative;
