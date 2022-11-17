@@ -7,7 +7,7 @@ import breakfast from './breakfast.png';
  const MenuWrapper = styled.div`
   height:100%;
   width:100%;
-  background: linear-gradient(red, orange);
+  background: linear-gradient(#E52B50, #FF5F1F);
   box-sizing: border-box;
   padding: 32px;
   position: relative;
@@ -25,6 +25,7 @@ import breakfast from './breakfast.png';
   .flex2 {
     border-bottom: 3px dotted white;
     flex: 1;
+    z-index:999;
   }
   .flex3 {
     position: relative;
@@ -34,14 +35,14 @@ import breakfast from './breakfast.png';
 `;
 
  const MenuBackground = styled.div`
-  height: 40%;
-  width: 50%;
-  background: red;
+  height: 45%;
+  width: 60%;
+  background: #E32636;
   border-bottom-right-radius: 25%;
   position: absolute;
+  top:0;
   left: 0;
   z-index: 23;
-  opacity: 0.5;
   z-index:1;
 `;
 
