@@ -1,4 +1,3 @@
-import {MenuList , GridItems , TextMenu , MenuCard ,MenuWrapper,} from './style' ;
 import Suggestion from './Suggestion';
 import HOC from '../HOC/HOC';
 import styled from 'styled-components';
