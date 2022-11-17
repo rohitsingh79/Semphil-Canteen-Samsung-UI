@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import background1 from './background1.jpg';
 
 export const MainWrapper = styled.div`
 height:${props => props.height}%;
@@ -6,6 +7,7 @@ width:100%;
 height:${props => props.height}px;
 padding:10% 3%;
 box-sizing:border-box;
+background-image: url(${background1});
 `;
 
 

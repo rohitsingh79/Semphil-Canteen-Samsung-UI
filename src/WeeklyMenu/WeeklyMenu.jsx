@@ -8,7 +8,6 @@ const WeeklyMenuWrapper = styled.div`
   width: 100%;
   background: #000000;
   box-sizing: border-box;
-  opacity: 0.85;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 48px;
