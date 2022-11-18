@@ -11,13 +11,12 @@ width:100%;
 height:100px;
 padding-left:3%;
 padding-right:3%;
-padding-top:2%;
-top:2px;
+padding-top:1%;
+top:0;
 left:0;
 display:flex;
 justify-content:space-between;
 box-sizing:border-box;
-border:1px solid brown;
 `;
 
 const AccountDetailWrapper = styled.div`
@@ -27,17 +26,22 @@ display:flex;
 justify-content:space-between;
 `;
 
-const Logo = styled.div`
-width:20%;
+const LogoWrapper = styled.div`
 height:100%;
+width:20%;
 display:flex;
-justify-content:center;
-align-items:center;
 .logoImg{
-    width:10%;
+    width:50%;
     height:100%;
 }
+.canteenHeading{
+    color:indigo;
+    font-size:20px;
+    align-self:center;
+}
 `;
+
+
 
 const AccountSettings = styled.div`
 display:flex;
@@ -72,13 +76,22 @@ padding:8px;
 function Header() {
   return (
     <HeaderWrapper>
-       <Logo>
+        <LogoWrapper>
+        <div className= 'logoImg'>
+        <img src = {LogoImage} style = {{height:'100%' , width:'100%'}}/>
+        </div>
+        <div className = 'canteenHeading'>
+         <span style = {{'font-size':'26px' , 'font-weight':'bold'}}>SEMPHIL</span> 
+         <div style = {{'font-size':'24px'}}>CANTEEN</div> 
+        </div>
+        </LogoWrapper>
+       {/* <Logo>
            <div className='logoImg'> 
                
                <img src = {LogoImage} style = {{height:'100%' , width:'100%'}}/>
            </div>
            <div>Hello</div>
-        </Logo>
+        </Logo> */}
        <AccountDetailWrapper>
          <AccountSettings>
            <div className = 'border'>
