@@ -2,21 +2,22 @@
 // displays the menu list
 import styled from 'styled-components';
 import HOC from '../HOC/HOC';
-import breakfast from './breakfast.png';
+import BreakFast from './BreakFast.jpg';
+import Lunch from './Lunch.jpg';
+import Snack from './Snack.jpg';
 
  const MenuWrapper = styled.div`
   height:100%;
   width:100%;
   background: linear-gradient(#E52B50, #F28C28);
   box-sizing: border-box;
-  padding: 32px;
+  padding: 24px;
   position: relative;
   .MenuFlex {
     display: flex;
     margin-bottom: 5%;
   }
   .flex1 {
-    flex: 0.1;
     position: relative;
     top: 5px;
     color: white;
@@ -50,12 +51,16 @@ import breakfast from './breakfast.png';
 const BoxContent =  styled.div`
 height:50%;
 width:100%;
+.spacingTop{
+  margin-top:15%;
+}
 `;
 
 const MenuTypeWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
+  margin-top:10%;
 `;
 
 const ImgTextWrapper = styled.div`
@@ -70,54 +75,96 @@ const ImgTextWrapper = styled.div`
 `;
 
 const ImgDiv = styled.div`
-  height: 80%;
+  height: 50%;
   border-radius: 10%;
 `;
 
 const TextDiv = styled.div`
-  color: black;
+  color: white;
   font-size: 14px;
   align-self: center;
-  margin-top: 10px;
+  margin-top: 12px;
+  font-weight:bold;
+  opacity:0.5;
+
+`;
+
+const HeadingWrapper = styled.div`
+position:absolute;
+display:flex;
+width:100%;
+justify-content:space-between;
+top:2%;
+left:0;
+z-index:999;
+.headingText{
+  color:white;
+  margin-left:24px;
+}
+.date{
+  border:1px solid white;
+  margin-right:10px;
+  border-radius:5px;
+  box-sizing:border-box;
+  padding-left:10px;
+  padding-right:10px;
+  font-size:14px;
+  color:white;
+}
 `;
 
 function MenuList(){
 
     const menuList = [
         {
-          name: "Noodels",
-          price: 10
+          name: "Chicken adobo",
+          price: '35.00'
         },
         {
-          name: "Vegetables",
-          price: 10
+          name: "Ginataang langka",
+          price: '20.00/10.00'
         },
         {
-          name: "Fruits",
-          price: 10
+          name: "Miswa patola",
+          price: '20.00/10.00'
         },
         {
-          name: "Vegetables",
-          price: 10
+          name: "upo & kalabasa",
+          price: '20.00/10.00'
         },
         {
-          name: "Fruits",
-          price: 10
+          name: "Spciy lumpiang shangai",
+          price: '25.00'
         },
         {
-          name: "Vegetables",
-          price: 10
+          name: "Buko Salad",
+          price: '25.00'
         },
         {
-          name: "Fruits",
-          price: 10
-        }
+          name: "Pork menudo",
+          price: '35.00'
+        },
+
+        {
+          name: "Adobong isda",
+          price: '35.00'
+        },
+        {
+          name: "Tortang dulong",
+          price: '35.00'
+        },
+
       ];
 
     return(
        <MenuWrapper>
+         <HeadingWrapper>
+           <div className='headingText'>Menu of the day</div>
+           <div className='date'>2019-05-21</div>
+         </HeadingWrapper>
            <MenuBackground></MenuBackground>
            <BoxContent>
+             <div className='spacingTop'>
            {menuList.map((item) => {
         return (
           <div className="MenuFlex">
@@ -127,12 +174,13 @@ function MenuList(){
           </div>
         );
       })}
+      </div>
             </BoxContent>
             <BoxContent>
      <MenuTypeWrapper>
         <ImgTextWrapper>
           <ImgDiv>
-          <img src = {breakfast}
+          <img src = {BreakFast}
           style = {{height:'100%',
         width:'100%',
         'border-radius':'10%'
@@ -143,7 +191,7 @@ function MenuList(){
         </ImgTextWrapper>
         <ImgTextWrapper>
           <ImgDiv>
-          <img src = {breakfast}
+          <img src = {Snack}
           style = {{height:'100%',
         width:'100%',
         'border-radius':'10%'
@@ -154,7 +202,7 @@ function MenuList(){
         </ImgTextWrapper>
         <ImgTextWrapper>
           <ImgDiv>
-          <img src = {breakfast}
+          <img src = {Lunch}
           style = {{height:'100%',
         width:'100%',
         'border-radius':'10%'
