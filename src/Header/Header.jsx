@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import Settings from './Settings.svg';
+import Flag from './Flag.svg';
+import Power from './Power.svg';
+import LogoImage from './LogoImage.svg';
+import Passport from './Passport.jpg'
 
 const HeaderWrapper = styled.div`
 position:absolute;
@@ -12,6 +17,7 @@ left:0;
 display:flex;
 justify-content:space-between;
 box-sizing:border-box;
+border:1px solid brown;
 `;
 
 const AccountDetailWrapper = styled.div`
@@ -22,12 +28,15 @@ justify-content:space-between;
 `;
 
 const Logo = styled.div`
-border:1px solid yellow;
 width:20%;
 height:100%;
 display:flex;
 justify-content:center;
 align-items:center;
+.logoImg{
+    width:10%;
+    height:100%;
+}
 `;
 
 const AccountSettings = styled.div`
@@ -37,12 +46,16 @@ height:100%;
 justify-content:space-between;
 background:#fff;
 box-shadow:0px 0px 56px -8px rgb(0 0 0 / 17%);
-.border{
-  border:1px solid red;
-}
 .nameText{
     align-self:center;
     color:grey;
+}
+.flexImage{
+    height:100%;;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:2%;
 }
 `;
 
@@ -52,21 +65,38 @@ height:100%;
 background:#fff;
 box-shadow:0px 0px 56px -8px rgb(0 0 0 / 17%);
 border-radius:5%;
+box-sizing:border-box;
+padding:8px;
 `;
 
 function Header() {
   return (
     <HeaderWrapper>
-       <Logo>hello</Logo>
+       <Logo>
+           <div className='logoImg'> 
+               
+               <img src = {LogoImage} style = {{height:'100%' , width:'100%'}}/>
+           </div>
+           <div>Hello</div>
+        </Logo>
        <AccountDetailWrapper>
          <AccountSettings>
-           <div className = 'border'>Image</div>
-           <div className='nameText'>Syed Mohiddin Hussainy</div>
-           <div className = 'border'>Settings</div>
+           <div className = 'border'>
+               <img src = {Passport} style = {{height:'100%' , width:'100%'}}></img>
+           </div>
+           <div className='nameText'>Rohit Pratap Singh</div>
+           <div className='flexImage'>
+               <img src = {Settings} style = {{height:'80%' , width:'80%'}}/>
+           </div>
          </AccountSettings> 
-         <AccountOption/>
-        <AccountOption/> 
-        <AccountOption/> 
+         <AccountOption>
+         <img src = {Flag} style = {{height:'100%' , width:'100%'}}/>
+           </AccountOption>  
+        <AccountOption>
+        </AccountOption> 
+        <AccountOption>
+        <img src = {Power} style = {{height:'100%' , width:'100%'}}/>    
+        </AccountOption> 
        </AccountDetailWrapper>
      </HeaderWrapper>
   );
