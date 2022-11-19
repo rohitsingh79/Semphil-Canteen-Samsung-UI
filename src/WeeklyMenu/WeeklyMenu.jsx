@@ -23,7 +23,7 @@ const GridWrapper = styled.div`
 `;
 
 const GridChild = styled.div`
-  flex: 30%;
+  flex: 45%;
   height: 50%;
   border-radius: 5%;
   margin: 5px;

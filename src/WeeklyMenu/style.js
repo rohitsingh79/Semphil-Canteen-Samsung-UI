@@ -63,16 +63,24 @@ align-items:flex-end;
 const SuggestionWrapper = styled.div`
 width:100%;
 height:100%;
+border:1px solid black;
 background:black;
 display:flex;
 justify-content:center;
 align-items:center;
+flex-direction:column;
 
 .suggestionText{
     margin-left:8px;
     margin-right:8px;
+    margin-bottom:8px;
     color:white;
 }
+`;
+
+export const ImageWrapper = styled.div`
+height:50%;
+width:20%;
 `;
 
 const MenuOfDayWrapper = styled.div`

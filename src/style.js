@@ -24,7 +24,16 @@ export const GridWrapper = styled.div`
 display:grid;
 grid-template-columns:24% 24% 24% 24%;
 grid-template-rows:100%;
+@media screen and (min-device-width: 501px) and (max-device-width: 1200px) { 
+    grid-template-columns:50% 50%;
+    grid-template-rows:50% 50%;
+}
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns:100%;
+    grid-template-rows:35% 35% 35% 35%;
+  }
+
 gap:20px;
-border:1px solid brown;
 `;
 
