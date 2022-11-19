@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 import background from './background.jpg';
 
+
+
+export const ContentWrapper = styled.div`
+height:89%;
+width:100%;
+border:2px dashed purple;
+box-sizing:border-box;
+padding:32px;
+`;
+
 export const MainWrapper = styled.div`
 height:${props => props.height}%;
 width:100%;
 height:${props => props.height}px;
-padding:10% 3%;
 box-sizing:border-box;
 background-image: url(${background});
 background-size: cover;
@@ -14,10 +23,9 @@ background-size: cover;
 
 export const GridWrapper = styled.div`
 display:grid;
-grid-template-columns:310px 310px 310px 310px;
-@media only screen and (max-width:1000px){
-    grid-template-columns:150px 150px 150px 150px;
-}
-grid-template-rows:600px;
-gap:40px;
+grid-template-columns:24% 24% 24% 24%;
+grid-template-rows:100%;
+gap:20px;
+border:1px solid brown;
 `;
+

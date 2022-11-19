@@ -6,14 +6,11 @@ import LogoImage from './LogoImage.svg';
 import Passport from './Passport.jpg'
 
 const HeaderWrapper = styled.div`
-position:absolute;
 width:100%;
-height:100px;
-padding-left:3%;
-padding-right:3%;
-padding-top:1%;
-top:0;
-left:0;
+height:12%;
+padding-left:32px;
+padding-right:32px;
+padding-top:16px;
 display:flex;
 justify-content:space-between;
 box-sizing:border-box;
@@ -31,7 +28,7 @@ height:100%;
 width:20%;
 display:flex;
 .logoImg{
-    width:50%;
+    width:35%;
     height:100%;
 }
 .canteenHeading{
@@ -85,13 +82,6 @@ function Header() {
          <div style = {{'font-size':'24px'}}>CANTEEN</div> 
         </div>
         </LogoWrapper>
-       {/* <Logo>
-           <div className='logoImg'> 
-               
-               <img src = {LogoImage} style = {{height:'100%' , width:'100%'}}/>
-           </div>
-           <div>Hello</div>
-        </Logo> */}
        <AccountDetailWrapper>
          <AccountSettings>
            <div className = 'border'>
