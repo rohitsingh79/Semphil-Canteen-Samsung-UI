@@ -6,7 +6,6 @@ import background from './background.jpg';
 export const ContentWrapper = styled.div`
 height:89%;
 width:100%;
-border:2px dashed purple;
 box-sizing:border-box;
 padding:32px;
 `;
